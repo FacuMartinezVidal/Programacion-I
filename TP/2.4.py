@@ -17,4 +17,4 @@ def eliminar2 (lst1,lst2):
     print(n_lst1)
     print(repetidas)
 
-print(eliminar1(lst1,lst2))
+#PREGUNTAR
