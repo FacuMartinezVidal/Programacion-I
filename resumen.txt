@@ -1,0 +1,39 @@
+Bancos le dan prestamos a los clientes (personas fisicas, personas juridicas)
+con distintas finalidades.
+
+Tipos de prestamos
+para personas fisicas--> hipotecarios, prendarios (autos), personales, tarjeto de credito, adelantos en cuenta corriente(credito para girar cheques)
+para personas juridicas--> adelantos en cuenta corriente, hipotecarios (propiedades), prendarios(autos/maquinas), para exportar o importar (comercio exterior), tarjetas corporativas (tarjeta de credito para empleados), prestamos para proyecto de inversion (para la empresa), descuento de facturas (cuando los clientes no te dan la plata)
+para bancos--> Call interfinancieros (prestamos entre bancos)
+
+Tipo de Garantias
+Preferidas-->   a--> autoliquidables (ante un problema que no te pague, ejecutas automaticamente)
+			-->SGR (empresa le da la seguridad al banco que la empresa la cual pide el prestamo va pagar, sino paga se hace cargo)
+		 	-->plaz fijo
+			-->efectivo
+		b--> son las hipotecas y las prendas (auto/maquina)
+
+		
+otras--> una persona toma un prestamos y alguien sale de fiador(sino paga la persona paga el)
+		--> se implementan porcentajes de cobertura
+
+*Hay prestamos que no tienen garantias
+
+Cartera Crediticia
+*recategorizacion obligatoria: los clientes paga a distintos bancos en los cuales tiene prestamos de manera diferente. Si la banco A lo tiene clasificado en normal, y el banco B lo tiene clasificado en 4 y ese banco b tiene mas del 40% de la deuda del sistema el banco A lo tiene que poner en situacion 4
+se clasifican en -->Consumo: la cartera de las personas fisicas, se clasifica el atraso de la 
+
+										-->1)Normal (solo registra atrasos de 31 dias)
+										-->2)En Observacion(atrasos de 31 a 90 dias)
+										-->3)Con Problemas(90 a 180 dias)
+										-->4)Alto riesgo de insolvencia (+180 dias a 365)
+										-->5)Irrecuperables (mas de 365 o quiebra)
+		 -->Comercial: la cartera de las personas juridicas y fisicas clasifica a la persona en:
+							-->segun en el atraso de la persona
+							-->mide la situacion del balance de la empresa economica y financiera (clashflow)
+							-->etc.
+		 -->Comercial Asimilable a consumo: quiere decir que son prestamos que le das a personas juridicas y fisicas con destino a actividad comercial
+							-->segun el atraso de la persona
+		
+		La diferencia entre ambas es el monto, la que tiene mayores montes (comercial) y las menores (comercial asimilable)
+		 -->Total: la suma de todas
