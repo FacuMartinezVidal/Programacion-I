@@ -16,18 +16,20 @@
 # F – Por último, emitir un listado con los alumnos que deben recursar la materia (con los dos parciales aplazados), ordenado por LU, de manera descendente. Puede utilizar una lista auxiliar para no alterar la matriz principal
 
 #  Los listados son independientes entre si
+
+
 coCurso=input('Ingrese el codigo del curso: ')
 bandera=True
 while bandera!=False:
     if len(coCurso)==5:
         bandera=False
     else:
-        coCurso=input('Codigo incorrecto, Ingrese codigo de curso nuevamente: ')
+        coCurso=input('El codigo debe tener 5  digitos, Ingrese codigo de curso nuevamente: ')
 
 aprobacion=int(input('Ingrese como se aprueba la materia: '))
 nombreMateria=input('Ingrese el nombre de la materia: ')
 
-columnas=int(input('Cantidada deseada de alumnos que se desea cargar: '))
+columnas=int(input('Cantidad deseada de alumnos que se desea cargar: '))
 filas=4
 matriz=[([0]*columnas) for f in range (filas)]
 
@@ -40,7 +42,7 @@ for x in range(0,len(uade)):
          logo+=uade[x+1]
 logo_fix=logo.upper()
 print(uade+" "+logo_fix)
-print(nombreMateria)
+print('Nombre de la Materia: ',nombreMateria)
 from random import randint as r
 for c in range(columnas):
     legajo=r(1000000,10000000)
@@ -70,7 +72,8 @@ if aprobacion==2:
     for c in range(columnas):
         if matriz[1][c]>4 and matriz[2][c]>4 and matriz[3][c]>=7:
             lu=str(matriz[0][c])
-            print(lu)
+            promedio=str(matriz[3][c])
+            print(lu+(promedio.rjust(4,'0')))
 
 
 lst_r=[]
