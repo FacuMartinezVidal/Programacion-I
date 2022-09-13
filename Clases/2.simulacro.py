@@ -84,6 +84,7 @@ lst_r.sort()
 print('Alumnos que recursan:')
 print(lst_r)
 
+z=''
            
 
         
