@@ -31,29 +31,57 @@ columnas=int(input('Cantidada deseada de alumnos que se desea cargar: '))
 filas=4
 matriz=[([0]*columnas) for f in range (filas)]
 
-
-print('Universidad Argentina de la Empresa  [UADE]')
+uade='Universidad Argentina de Empresas'
+logo=''
+for x in range(0,len(uade)):
+    if x==0:
+        logo+=uade[x]
+    if uade[x]==" ":
+         logo+=uade[x+1]
+logo_fix=logo.upper()
+print(uade+" "+logo_fix)
 print(nombreMateria)
 from random import randint as r
+for c in range(columnas):
+    legajo=r(1000000,10000000)
+    nota1=r(1,10)
+    nota2=r(1,10)
+    sFinal= (nota1+nota2)/2
+    matriz[0][c]=legajo
+    matriz[1][c]=nota1
+    matriz[2][c]=nota2
+    matriz[3][c]=sFinal
+
 for f in range(filas):
     print()
     for c in range(columnas):
-        legajo=r(1000000,10000000)
-        nota1=r(1,10)
-        nota2=r(1,10)
-        sFinal= (nota1+nota2)/2
-        matriz[0][c]=legajo
-        matriz[1][c]=nota1
-        matriz[2][c]=nota2
-        matriz[3][c]=sFinal
         print("%2d" % matriz[f][c],end=" ")
 print()
 
-for c in range(columnas):
-        if aprobacion==1 and matriz[3][c]>=7:
+if aprobacion==1:
+    print('Alumnos Promocionados')
+    for c in range(columnas):
+        if matriz[1][c]>4 and matriz[2][c]>4 and matriz[3][c]>=7:
             lu=str(matriz[0][c])
             print(lu.rjust(15,"0"))
-            
+
+if aprobacion==2:
+    print('Alumnos que rinden Final y Promedio>=7')
+    for c in range(columnas):
+        if matriz[1][c]>4 and matriz[2][c]>4 and matriz[3][c]>=7:
+            lu=str(matriz[0][c])
+            print(lu)
+
+
+lst_r=[]
+for c in range(columnas):
+    if matriz[1][c]<4 and matriz[2][c]<4:
+        lst_r.append(matriz[0][c])
+lst_r.sort()
+print('Alumnos que recursan:')
+print(lst_r)
+
+           
 
         
 

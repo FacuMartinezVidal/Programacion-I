@@ -79,9 +79,9 @@
 #strip() elimina de ambos lados
 
 #format
-a=123
-print("%4d" %a) #te da cuatro digitos
-print("%4f"%a) #te da la cantidad de numeros que quieras despues de la coma
-nombre="Maria"
-nota=9
-print("Legajo {} Nombre {} Nota {}" .format(a,nombre,nota))
+# a=123
+# print("%4d" %a) #te da cuatro digitos
+# print("%4f"%a) #te da la cantidad de numeros que quieras despues de la coma
+# nombre="Maria"
+# nota=9
+# print("Legajo {} Nombre {} Nota {}" .format(a,nombre,nota))
