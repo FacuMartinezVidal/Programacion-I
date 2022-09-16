@@ -14,3 +14,41 @@
 # Mostrar los códigos de repuestos a reponer, mostrándolos en una fila, en un campo de 30 espacios, con formato centrado y completados el campo por guiones
 # Cuantos son
 # Qué porcentaje representa la cantidad a reponer sobre el total de los repuestos
+
+
+
+#Datos que tengo
+abc=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+columnas=100
+filas=4
+matriz=[([0]*columnas)for f in range (filas)]
+
+#En la fila 0, generar los tres valores aleatorios
+from random import randint as r
+matriz[0][0]=r(1,100)
+matriz[0][1]=r(500,1000)
+matriz[0][2]=r(1,26)
+pos=matriz[0][2]
+num1=matriz[0][0]
+num2=matriz[0][1]
+print (pos)
+
+#concatenar el numero + letra
+def repuesto(abc,pos):
+    letra=abc[pos]
+    datoNuevo=letra+ str(num1)+str(num2)
+    abc[pos]=datoNuevo
+    return abc[pos]
+codigoRepuesto=repuesto(abc,pos)
+
+#Lo cargo en la fila 0 de la matriz
+matriz[0][3]=codigoRepuesto
+
+#Cargo los valores pedidos para la fila 1,2,3
+matriz[1][0]=r(1,200)
+matriz[2][0]=r(10,30)
+stock=matriz[1][0]
+reposicion=[2][0]
+if stock<reposicion:
+    matriz[3][0]="reponer"
+print(abc)
