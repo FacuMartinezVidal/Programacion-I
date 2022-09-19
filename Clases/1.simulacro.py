@@ -24,7 +24,7 @@ lista_abc=abc.split()
 
 #Creo la matriz sin comprension
 filas=4
-columnas=100
+columnas=6
 matriz=[]
 for f in range(filas):
     matriz.append([])
@@ -35,7 +35,7 @@ for f in range(filas):
 def codigoRepuesto():
     v1_fila0=r(1,100)
     v2_fila0=r(500,1000)
-    v3_fila0=r(1,20)
+    v3_fila0=r(1,25)
     letra=lista_abc[v3_fila0]
     repuesto=letra+ str(v1_fila0)+ str(v2_fila0)
     return repuesto
