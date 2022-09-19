@@ -15,40 +15,82 @@
 # Cuantos son
 # Qué porcentaje representa la cantidad a reponer sobre el total de los repuestos
 
-
-
-#Datos que tengo
-abc=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-columnas=100
-filas=4
-matriz=[([0]*columnas)for f in range (filas)]
-
-#En la fila 0, generar los tres valores aleatorios
 from random import randint as r
-matriz[0][0]=r(1,100)
-matriz[0][1]=r(500,1000)
-matriz[0][2]=r(1,26)
-pos=matriz[0][2]
-num1=matriz[0][0]
-num2=matriz[0][1]
-print (pos)
 
-#concatenar el numero + letra
-def repuesto(abc,pos):
-    letra=abc[pos]
-    datoNuevo=letra+ str(num1)+str(num2)
-    abc[pos]=datoNuevo
-    return abc[pos]
-codigoRepuesto=repuesto(abc,pos)
+#Genero la lista abc
+abc = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
+lista_abc=abc.split()
 
-#Lo cargo en la fila 0 de la matriz
-matriz[0][3]=codigoRepuesto
 
-#Cargo los valores pedidos para la fila 1,2,3
-matriz[1][0]=r(1,200)
-matriz[2][0]=r(10,30)
-stock=matriz[1][0]
-reposicion=[2][0]
-if stock<reposicion:
-    matriz[3][0]="reponer"
-print(abc)
+#Creo la matriz sin comprension
+filas=4
+columnas=100
+matriz=[]
+for f in range(filas):
+    matriz.append([])
+    for c in range(columnas):
+        matriz[f].append(0)
+
+#Para la fila 0...
+def codigoRepuesto():
+    v1_fila0=r(1,100)
+    v2_fila0=r(500,1000)
+    v3_fila0=r(1,20)
+    letra=lista_abc[v3_fila0]
+    repuesto=letra+ str(v1_fila0)+ str(v2_fila0)
+    return repuesto
+
+for c_fila0 in range(columnas):
+    matriz[0][c_fila0]=codigoRepuesto()
+
+#Para la fila 1...
+def stock():
+    v_fila1=r(1,200)
+    return v_fila1
+
+for c_fila1 in range(columnas):
+    matriz[1][c_fila1]=stock()
+
+#Para la fila 2...
+def puntoReposicion():
+    v_fila2=r(10,30)
+    return v_fila2
+
+for c_fila2 in range(columnas):
+    matriz[2][c_fila2]=puntoReposicion()
+
+#Para la fila 3...
+repuestoReponer=[]
+for c in range(columnas):
+    if (matriz[1][c])<(matriz[2][c]):
+        repuestoReponer.append(matriz[0][c])
+        matriz[3][c]= 'reponer'
+
+#Listado que me pide al final
+#primera letra de la palabra en mayuscula
+empresa= 'La vieja heladera'
+empresa_upper=empresa.title()
+#sigla
+sigla=''
+for x in range(len(empresa_upper)):
+    if x==0:
+        sigla+=empresa_upper[x]
+    if empresa_upper[x]==' ':
+        sigla+=empresa_upper[x+1]
+
+#Matriz impresa
+for j in range(filas):
+    print()
+    for i in range(columnas):
+        print("%s" % matriz[j][i], end=' ')
+
+#Repuesto a reponer centrado con guiones
+for x in range(len(repuestoReponer)):
+    print(repuestoReponer[x].center(30,'-'))
+
+#Cuanto hay que reponer
+print('Repuestos a reponer:',len(repuestoReponer))
+
+#Porcentaje
+porcentaje= len(repuestoReponer)*100 // len(matriz[1])
+print('Representan el:',str(porcentaje)+'%','stock')
