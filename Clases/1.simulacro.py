@@ -24,7 +24,7 @@ lista_abc=abc.split()
 
 #Creo la matriz sin comprension
 filas=4
-columnas=6
+columnas=100
 matriz=[]
 for f in range(filas):
     matriz.append([])
