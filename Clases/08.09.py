@@ -50,8 +50,8 @@
 
 #Ingresar un valor y obtener su cubo utlizando lambda
 
-def main():
-    valor=int(input("Ingrese el valor: "))
-    cubo=lambda valor: pow(valor,3)
-    print("valor elvado al cubo:",cubo(valor))
-main()
+# def main():
+#     valor=int(input("Ingrese el valor: "))
+#     cubo=lambda valor: pow(valor,3)
+#     print("valor elvado al cubo:",cubo(valor))
+# main()

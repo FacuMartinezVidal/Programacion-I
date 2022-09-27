@@ -78,9 +78,9 @@
 #cuadrado=[i**2 for i in lista] #eleva todos los elementos al cuadrado, sirve para todos los tipos de funciones aritmeticas 
 #print(cuadrado)
 #cuadrado2=[i**2 for i in lista if var%2==0] #tambien le podes agregar una condicion 
-str="LearnPython"
+# str="LearnPython"
 
-length_str=len(str)
+# length_str=len(str)
 
-sliced_str=str[length_str::-1] 
-print ("The sliced string is:",sliced_str)
+# sliced_str=str[length_str::-1] 
+# print ("The sliced string is:",sliced_str)
