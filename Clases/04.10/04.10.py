@@ -72,3 +72,5 @@
 #                 print(legajo,nombre)
 #     finally:
 #         arch.close()
+
+print('hola')
