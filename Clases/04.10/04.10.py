@@ -31,7 +31,44 @@
 #arch.close()
 
 #Read, lo mismo que read linea pero no te crea una lista
-arch=open("/Users/facundomartinezvidal/Documents/UADE/Programacion-I/Clases/04.10/datos.txt",mode="r")
-linea=arch.read()
-print(linea)
-arch.close()
+# arch=open("/Users/facundomartinezvidal/Documents/UADE/Programacion-I/Clases/04.10/datos.txt",mode="r")
+# linea=arch.read()
+# print(linea)
+# arch.close()
+
+#Metodo de Seek, para poder volver el archivo permitiendo poner el cursor en la posicion que yo desee
+# arch=open("/Users/facundomartinezvidal/Documents/UADE/Programacion-I/Clases/04.10/datos.txt",mode="r")
+# linea=arch.read()
+# print(linea)
+# print('archivo leido')
+# arch.seek(0)
+# print('segundo lectura')
+# linea=arch.read()
+# arch.close()
+
+#Ejemplo de ejercicio con while
+# arch=open("/Users/facundomartinezvidal/Documents/UADE/Programacion-I/Clases/04.10/datos.txt",mode="r")
+# linea=arch.read()
+# print(linea)
+# while linea:
+#     legajo,nombre=linea.split(';')
+#     print(legajo,nombre)
+#     linea=arch.read()
+# arch.close()
+# print('fin')
+
+#Otro ejemplo pero con for y try
+# try:
+#     arch=open("/Users/facundomartinezvidal/Documents/UADE/Programacion-I/Clases/04.10/datos.txt",mode="r")
+#     linea=arch.read()
+# except IOError:
+#     print('Error de lectura del archivo')
+# else:
+#     try:
+#         for linea in arch:
+#             legajo,nombre=linea.split(";")
+#             legajo=int(legajo)
+#             if legajo<100:
+#                 print(legajo,nombre)
+#     finally:
+#         arch.close()
