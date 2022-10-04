@@ -73,4 +73,19 @@
 #     finally:
 #         arch.close()
 
-print('hola')
+
+
+#Como utilizar archivos de excel
+#Instalar PIP (libreria de python), luego instalar openpyxl (pip install openpyxl)
+#importar libreria de openpyxl en el codigo
+# import openpyxl
+#leer el archivo
+# acv=openpyxl.load_workbook('D:/UADE/Programacion-I/Clases/04.10/planilla.xlsx', data_only=True) #con el data_only=True  es para que no lea las formulas de excel
+# hoja=acv.active  #para elegir la hoja que vas a usar de la planilla de excel
+# celdas=hoja['B7' : 'C26']  #elijo el rango de celdas que voy a usar de esa hoja
+# for fila in celdas:
+#     for celda in fila:
+#         print(celda.value)
+#otra opcion es por compresion de listas
+# for fila in celdas:
+#     print([celda.value for celda in fila])
