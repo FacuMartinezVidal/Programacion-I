@@ -1,0 +1,9 @@
+SYY553;Carlos;100
+SYY553;Carlos;100
+SYY553;Carlos;100
+VTU000;Laura Diaz;242
+OYH625;Alberto Lopez;714
+ARW625;Alberto Lopez;714
+AUTO03;Carlos;1000
+AUTO02;Carlos;200
+AUTO01;Carlos;1230
